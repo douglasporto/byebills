@@ -1,5 +1,3 @@
-import Main from 'components/Main'
-
-export default function Home() {
-  return <Main />
+export default function SignIn() {
+  return <h1>Douglas</h1>
 }
