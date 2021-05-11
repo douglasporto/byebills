@@ -7,7 +7,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Workamais</title>
+        <title>Bye Bills !</title>
         <link rel="shortcut icon" href="/img/brain-logo.png" />
         <link rel="apple-touch-icon" href="/img/brain-logo.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -15,10 +15,7 @@ function App({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
-        <meta
-          name="description"
-          content="Project for manager your freelances"
-        />
+        <meta name="description" content="Project for manager your bills" />
       </Head>
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />

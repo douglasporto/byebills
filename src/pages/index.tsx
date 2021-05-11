@@ -1,4 +1,4 @@
-import { Flex, Button, Stack, Image } from '@chakra-ui/react'
+import { Flex, Button, Stack, Text } from '@chakra-ui/react'
 
 import { Input } from 'components/Form/Input'
 
@@ -11,7 +11,17 @@ export default function SignIn() {
       justifyContent="center"
       flexDirection="column"
     >
-      <Image src="/img/logo.png" alt="Logo Workamais" height="360px" />
+      <Text
+        fontSize={['4xl', '5xl']}
+        fontWeight="bold"
+        letterSpacing="tight"
+        marginBottom="8"
+      >
+        Bye Bills
+        <Text as="span" color="primary.500" marginLeft="1">
+          !
+        </Text>
+      </Text>
 
       <Flex
         as="form"
