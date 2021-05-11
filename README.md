@@ -1,6 +1,6 @@
-# Workamais
+# Bye Bills
 
-A simple manager to work freelance
+A simple manager to bills
 
 <img src="./public/img/logo.png" width=200 />
 
@@ -10,9 +10,9 @@ A simple manager to work freelance
 First, run the development server:
 
 ```bash
-npm install && cd workamais && npm run dev
+npm install && cd byebills && npm run dev
 # or
-yarn install && cd workamais && yarn dev
+yarn install && cd byebills && yarn dev
 ```
 
 ## Development and contributions – omg developers
