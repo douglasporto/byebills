@@ -27,7 +27,7 @@ export default function SignIn() {
 
           <Input name="password" label="Senha" type="password" />
         </Stack>
-        <Button type="submit" size="lg" marginTop="6" colorScheme="purple">
+        <Button type="submit" size="lg" marginTop="6" colorScheme="primary">
           Entrar
         </Button>
       </Flex>
