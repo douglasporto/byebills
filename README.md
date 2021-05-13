@@ -52,6 +52,7 @@ bug fixes are ready
 - jest
 - storybook
 - React Icons
+- Apexcharts
 
 ## License
 
