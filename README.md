@@ -51,6 +51,7 @@ bug fixes are ready
 - chakra-ui
 - jest
 - storybook
+- React Icons
 
 ## License
 
