@@ -9,6 +9,7 @@
     "lint": "eslint src --max-warnings=0",
     "test": "jest",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
+    "generate:page": "yarn plop --plopfile ./generators/plopfilePage.js",
     "test:watch": "yarn test --watch",
     "postinstall": "husky install",
     "storybook": "start-storybook -s ./public -p 6006",
