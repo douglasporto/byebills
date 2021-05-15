@@ -9,12 +9,19 @@ import {
   Th,
   Tr,
   Tbody,
-  Td
+  Td,
+  useBreakpointValue
 } from '@chakra-ui/react'
 import { Header, Sidebar } from 'components/Templates/Dashboard'
 import { RiAddLine, RiPencilLine } from 'react-icons/ri'
 
 export default function Transactions() {
+  const isDrawerSidebar = useBreakpointValue({
+    base: false,
+    lg: true
+  })
+  console.log(isDrawerSidebar)
+
   return (
     <Box>
       <Header />

@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from 'styles/theme'
+import { SidebarDrawerProvider } from 'context/SidebarDrawerContext'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -18,7 +19,9 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Project for manager your bills" />
       </Head>
       <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
+        <SidebarDrawerProvider>
+          <Component {...pageProps} />
+        </SidebarDrawerProvider>
       </ChakraProvider>
     </>
   )

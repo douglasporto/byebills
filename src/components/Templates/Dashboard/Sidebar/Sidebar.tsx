@@ -1,20 +1,44 @@
-import { Box, Stack } from '@chakra-ui/react'
-import { RiDashboardLine } from 'react-icons/ri'
-import { NavSection, NavLink } from './Nav'
+import { DrawerBody } from '@chakra-ui/core'
+import {
+  Box,
+  Drawer,
+  DrawerOverlay,
+  DrawerCloseButton,
+  DrawerContent,
+  useBreakpointValue,
+  DrawerHeader
+} from '@chakra-ui/react'
+import { useSidebarDrawer } from 'context/SidebarDrawerContext'
+import { Logo } from '../Header/Logo'
+import { NavSidebar } from './Nav'
 
 export function Sidebar() {
+  const { isOpen, onClose } = useSidebarDrawer()
+  const isDrawerSidebar = useBreakpointValue({
+    base: true,
+    lg: false
+  })
+
+  if (isDrawerSidebar) {
+    return (
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
+        <DrawerOverlay>
+          <DrawerContent backgroundColor="gray.800" padding="4">
+            <DrawerCloseButton marginTop="6" />
+            <DrawerHeader>
+              <Logo />
+            </DrawerHeader>
+            <DrawerBody>
+              <NavSidebar />
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerOverlay>
+      </Drawer>
+    )
+  }
   return (
     <Box as="aside" width="64" marginRight="8">
-      <Stack spacing="12" align="flex-start">
-        <NavSection title="GERAL">
-          <NavLink title="Dashboard" icon={RiDashboardLine} />
-          <NavLink title="Transações" icon={RiDashboardLine} />
-          <NavLink title="Cartões de Crédito" icon={RiDashboardLine} />
-        </NavSection>
-        <NavSection title="PLANEJAMENTO">
-          <NavLink title="Meus Planejamentos" icon={RiDashboardLine} />
-        </NavSection>
-      </Stack>
+      <NavSidebar />
     </Box>
   )
 }

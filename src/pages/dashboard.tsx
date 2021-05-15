@@ -52,10 +52,10 @@ export default function Dashboard() {
         <Sidebar />
         <SimpleGrid flex="1" gap="4" minChildWidth="320px" align="flex-start">
           <Box
-            padding="8"
+            padding={['4', '8']}
             backgroundColor="gray.800"
             borderRadius={8}
-            paddingBottom="4"
+            paddingBottom={['2', '4']}
           >
             <Text fontSize="lg" marginBottom="4">
               Balanço Mensal
@@ -63,10 +63,10 @@ export default function Dashboard() {
             <Chart options={options} series={series} type="area" height={160} />
           </Box>
           <Box
-            padding="8"
+            padding={['4', '8']}
             backgroundColor="gray.800"
             borderRadius={8}
-            paddingBottom="4"
+            paddingBottom={['2', '4']}
           >
             <Text fontSize="lg" marginBottom="4">
               Despesas Mensais
