@@ -1,6 +1,6 @@
 import { Flex, Button, Stack, Text } from '@chakra-ui/react'
 
-import { Input } from 'components/Form/Input'
+import { BmInput } from 'components/Form/BmInput'
 
 export default function SignIn() {
   return (
@@ -33,9 +33,9 @@ export default function SignIn() {
         flexDirection="column"
       >
         <Stack spacing="4">
-          <Input name="email" label="E-mail" type="email" />
+          <BmInput name="email" label="E-mail" type="email" />
 
-          <Input name="password" label="Senha" type="password" />
+          <BmInput name="password" label="Senha" type="password" />
         </Stack>
         <Button type="submit" size="lg" marginTop="6" colorScheme="primary">
           Entrar
