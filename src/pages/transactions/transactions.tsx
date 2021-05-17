@@ -10,10 +10,13 @@ import {
   Tr,
   Tbody,
   Td,
-  useBreakpointValue
+  useBreakpointValue,
+  useDisclosure
 } from '@chakra-ui/react'
 import { Header, Sidebar } from 'components/Templates/Dashboard'
+import { Modal } from 'components/Modal/Modal'
 import { RiAddLine, RiPencilLine } from 'react-icons/ri'
+import { CreateTransaction } from 'components/Transactions/CreateTransaction'
 
 export default function Transactions() {
   const isDrawerSidebar = useBreakpointValue({
@@ -21,6 +24,8 @@ export default function Transactions() {
     lg: true
   })
   console.log(isDrawerSidebar)
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <Box>
@@ -44,9 +49,13 @@ export default function Transactions() {
               fontSize="sm"
               colorScheme="primary"
               leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+              onClick={onOpen}
             >
               Criar Transação
             </Button>
+            <Modal title="Criar Transação" isOpen={isOpen} onClose={onClose}>
+              <CreateTransaction />
+            </Modal>
           </Flex>
           <Table colorScheme="whiteAlpha">
             <Thead>
