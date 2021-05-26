@@ -34,7 +34,6 @@ export default function SignIn() {
       >
         <Stack spacing="4">
           <BmInput name="email" label="E-mail" type="email" />
-
           <BmInput name="password" label="Senha" type="password" />
         </Stack>
         <Button type="submit" size="lg" marginTop="6" colorScheme="primary">

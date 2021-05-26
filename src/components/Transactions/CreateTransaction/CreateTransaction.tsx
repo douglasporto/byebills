@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import { Flex, FormControl, FormLabel, Stack, Switch } from '@chakra-ui/react'
 import { BmInput } from 'components/Form/BmInput'
 import { Select } from './styles'
 
 export function CreateTransaction() {
+  const [isFixed, setIsFixed] = useState(false)
+
   return (
     <Flex
       as="form"
@@ -29,7 +32,13 @@ export function CreateTransaction() {
           <FormLabel htmlFor="email-alerts" mb="0">
             Transação fixa?
           </FormLabel>
-          <Switch colorScheme="teal" id="isFixed" />
+          <Switch
+            id="isFixed"
+            colorScheme="teal"
+            isChecked={isFixed}
+            onChange={() => setIsFixed(!isFixed)}
+          />
+          {isFixed && <div>Douglas</div>}
         </FormControl>
       </Stack>
     </Flex>
