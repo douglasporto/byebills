@@ -56,6 +56,8 @@ bug fixes are ready
 - storybook
 - React Icons
 - Apexcharts
+- react-hook-form
+- Yup
 
 ## License
 
