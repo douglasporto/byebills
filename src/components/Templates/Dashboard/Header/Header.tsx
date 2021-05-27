@@ -1,6 +1,16 @@
-import { Flex, Text, Box, Avatar } from '@chakra-ui/react'
+import { Flex, Icon, IconButton, useBreakpointValue } from '@chakra-ui/react'
+import { useSidebarDrawer } from '../../../../context/SidebarDrawerContext'
+import { RiMenuLine } from 'react-icons/ri'
+import { Logo } from './Logo'
+import { Profile } from './Profile'
 
 export function Header() {
+  const { onOpen } = useSidebarDrawer()
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true
+  })
+
   return (
     <Flex
       as="header"
@@ -12,29 +22,24 @@ export function Header() {
       px="6"
       align="center"
     >
-      <Text fontSize="3xl" fontWeight="bold" letterSpacing="tight">
-        Bye Bills
-        <Text as="span" color="primary.500" marginLeft="1">
-          !
-        </Text>
-      </Text>
+      {!isWideVersion && (
+        <IconButton
+          aria-label="open navigation"
+          icon={<Icon as={RiMenuLine} />}
+          fontSize="24"
+          variant="unstyled"
+          onClick={onOpen}
+          marginRight="2"
+        ></IconButton>
+      )}
+      <Logo />
 
       <Flex align="center" ml="auto">
-        <Flex align="center">
-          <Box mr="4">
-            <Text>Douglas Porto</Text>
-            <Text color="gray.300" fontSize="small">
-              Douglas@bm.com
-            </Text>
-          </Box>
-
-          <Avatar
-            size="md"
-            bgColor="primary.500"
-            color="white"
-            name="Douglas Porto"
-          />
-        </Flex>
+        <Profile
+          showProfileData={isWideVersion}
+          name="Douglas Porto"
+          email="douglas@bm.com"
+        />
       </Flex>
     </Flex>
   )

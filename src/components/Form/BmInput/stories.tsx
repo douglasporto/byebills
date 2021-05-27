@@ -1,10 +1,10 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import { InputProps, Input } from './Input'
+import { InputProps, BmInput } from './BmInput'
 import { Flex } from '@chakra-ui/core'
 
 export default {
-  title: 'Input',
-  component: Input,
+  title: 'BmInput',
+  component: BmInput,
   argTypes: {
     name: {
       type: 'string'
@@ -26,7 +26,7 @@ const Template: Story<InputProps> = ({ ...args }) => {
       borderRadius={8}
       flexDirection="column"
     >
-      <Input name={args.name} label={args.label} />
+      <BmInput name={args.name} label={args.label} />
     </Flex>
   )
 }

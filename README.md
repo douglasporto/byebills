@@ -20,6 +20,9 @@ Development is ongoing, and the development team, as well as other volunteers,
 can freely work in their own trees and submit pull requests when features or
 bug fixes are ready
 
+### For Commit
+ - For commit, use `npm run commit` or `yarn commit` because we use commitizen to message pattern
+
 ## Scripts
 
   - Create a new component
@@ -53,6 +56,8 @@ bug fixes are ready
 - storybook
 - React Icons
 - Apexcharts
+- react-hook-form
+- Yup
 
 ## License
 
